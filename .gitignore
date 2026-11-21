@@ -1,0 +1,46 @@
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+
+# Virtual environment (recreate with: py -3.11 -m venv .venv)
+.venv/
+
+# Secrets
+.env
+
+# IDE
+.idea/
+.vscode/
+
+# Data: never committed. Raw IEEE-CIS CSVs are tracked with DVC instead.
+data/raw/*
+data/interim/*
+data/features/*
+!data/*/.gitkeep
+*.csv
+*.parquet
+
+# Databases
+*.db
+*.sqlite
+*.sqlite3
+
+# Model binaries
+*.joblib
+*.pkl
+*.pt
+*.pth
+*.ckpt
+
+# Experiment outputs (logged to MLflow)
+experiments/runs/
+mlruns/
+mlartifacts/
+
+# FYP-1 runtime data
+legacy/fyp1/data/
+legacy/fyp1/instance/
+legacy/fyp1/models_store/xgboost_baseline.json
+legacy/fyp1/scoring_latency.log
